@@ -24,7 +24,7 @@ export default function Navbar(){
 
     return(
         <main className={`navbar ${isScrolled ? "scroll" : ""}`}>
-            <h3>Devcci</h3>
+            <h3 className="logo-brand">Devcci</h3>
             <div className="nav-search">
                 <input className="nav-input" type="text" />
                 <img width="15" height="15" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>

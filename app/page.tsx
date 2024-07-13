@@ -42,7 +42,7 @@ export default function Home() {
         <div className="circlePosition"></div>
         <div className="circlePosition2"></div>
         <div className="texts-section2">
-          <h1>Choisissez votre <span>langage</span>  ou <span>framework</span> et documentez-vous. </h1>
+          <h1>Choisissez votre <span>language</span>  ou <span>framework</span> et documentez-vous. </h1>
           <p>Sélectionnez votre outil de prédilection et accédez à des ressources variées pour approfondir vos connaissances et maîtriser les technologies de pointe.</p>
         </div>
         <div className="cards-section2-container">
