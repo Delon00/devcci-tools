@@ -27,6 +27,8 @@ export default function Home() {
       <Navbar/>
       <div className="main-hero">
         <div className="texts-hero">
+          <div className="circlebubble"></div>
+          <div className="circlebubble2"></div>
           <h1>Devcci tools</h1>
           <h2>Augmentez votre productivité grâce à nos composants,docs et astuces avancés.</h2>
           <p>Docs+, composants, astuces, débogage, forum</p>

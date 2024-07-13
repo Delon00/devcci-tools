@@ -34,6 +34,7 @@ export default function Navbar(){
                 <a className="nav-link" href="/composant">Docs</a>
                 <a className="nav-link" href="/composant">Composants</a>
                 <a className="nav-link" href="/composant">Astuces</a>
+                <Image width="48" height="48" src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1"/>
             </div>
         </main>
     )
