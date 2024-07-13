@@ -36,7 +36,7 @@ export default function Home() {
           <div className="formulaire"><Image src={formulaire} alt="edy-ia"/></div>
           <div className="tabs-img"><Image src={tabs} alt="edy-ia"/></div>
           <div className="card-img"><Image src={card} alt="card"/></div>
-          <div className="chat date-picker chat-start"><div className="chat-bubble">Hey Delon j'aurais besoin<br />d'astuces pour mon projet electron js</div> </div>
+          <div className="chat date-picker chat-start"><div className="chat-bubble">Hey Delon j&apos;aurais besoin<br />d'astuces pour mon projet electron js</div> </div>
         </div>
       </div>
       <div className="section2">
