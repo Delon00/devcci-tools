@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import "./navbar.css"
+import Image from "next/image";
 
 export default function Navbar(){
 
@@ -27,7 +28,7 @@ export default function Navbar(){
             <h3 className="logo-brand">Devcci</h3>
             <div className="nav-search">
                 <input className="nav-input" type="text" />
-                <img width="15" height="15" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                <Image src="https://img.icons8.com/ios/50/search--v1.png" alt="search icon" width={15} height={15}/>
             </div>
             <div className="navlinks">
                 <a className="nav-link" href="/composant">Docs</a>
