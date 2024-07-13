@@ -17,6 +17,8 @@ import nextjs from '@/public/nextjs.png';
 import reactjs from '@/public/react.png';
 import expo from '@/public/expo.png';
 import laravel from '@/public/laravel.png';
+import flutter from '@/public/flutter.png';
+import electron from '@/public/electron.png';
 // -----------------------------------------------------------
 export default function Home() {
   return (
@@ -79,10 +81,24 @@ export default function Home() {
               <p>Explorez des conseils pratiques pour améliorer votre expérience de développement avec Laravel.</p>
             </div>
           </CardFramework>
-          <CardFramework></CardFramework>
-          <CardFramework></CardFramework>
+          <CardFramework>
+            <a className="card-link" href="/"></a>
+            <Image className="logo-section2" src={flutter} alt="nextjs"/>
+            <div className="card-texts">
+            <h2 className="text-[#00b2fe]">Flutter</h2>
+              <p>Découvrez de nouvelles astuces pour simplifier le développement de vos appli. mobile avec Flutter.</p>
+            </div>
+          </CardFramework>
+          <CardFramework>
+            <a className="card-link" href="/"></a>
+            <Image className="logo-section2" src={electron} alt="nextjs"/>
+            <div className="card-texts">
+            <h2 >Electron</h2>
+              <p>Découvrez de nouvelles astuces pour développer des logiciel pour windows et mac</p>
+            </div>
+          </CardFramework>
         </div>
-        
+
       </div>
     </main>
   );

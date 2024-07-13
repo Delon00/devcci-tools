@@ -208,6 +208,8 @@ h6 {font-size: 0.67em; font-weight: bold;}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  justify-content: center;
+  padding: 2rem;
   margin: 2rem 0;
 }
 .logo-section2{
@@ -266,4 +268,9 @@ h6 {font-size: 0.67em; font-weight: bold;}
 }
 @media only screen and (max-width: 568px) {
   .nav-link{display: none;}
+}
+@media only screen and (max-width: 400px) {
+  .circlePosition{
+    width: 210px !important;
+  }
 }
