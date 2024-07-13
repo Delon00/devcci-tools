@@ -27,8 +27,8 @@ body {
 }
 
 @layer utilities {.text-balance {text-wrap: balance;}}
-h1 {font-size: 2.5em;font-weight: bold;}
-h2 {font-size: 1.5em; font-weight: bold;}
+h1 {font-size: 2.5em;font-weight: bold; line-height: normal;}
+h2 {font-size: 1.5em; font-weight: bold;line-height: normal;}
 h3 {font-size: 1.17em; font-weight: bold;}
 h4 {font-size: 1em; font-weight: bold;}
 h5 {font-size: 0.83em; font-weight: bold;}
@@ -287,9 +287,8 @@ h6 {font-size: 0.67em; font-weight: bold;}
 }
 @media only screen and (max-width: 568px) {
   .nav-link{display: none;}
-  .texts-section2{
-    width: 100% !important;
-  }
+  .texts-section2{width: 100% !important;}
+  .texts-hero h2 {font-size: 25px;}
 }
 @media only screen and (max-width: 400px) {
   .circlePosition{
