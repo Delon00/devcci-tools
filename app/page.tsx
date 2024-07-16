@@ -8,7 +8,6 @@ import CardFramework from "@/components/cards/cardFramework"
 
 // ---------------------IMAGES--------------------------------
 import guapo from '@/public/guapo.png';
-import vscode from '@/public/vscode.png';
 import mobile from '@/public/mobile.png';
 import formulaire from '@/public/formlog.png';
 import tabs from '@/public/tabs.png';
@@ -35,7 +34,6 @@ export default function Home() {
         </div>
         <div className="images-hero">
           <div className="guapo-store"><Image src={guapo} alt="guapo store"/></div>
-          <div className="vscode"><Image src={vscode} alt="guapo store"/></div>
           <div className="mobile"><Image src={mobile} alt="guapo store"/></div>
           <div className="formulaire"><Image src={formulaire} alt="edy-ia"/></div>
           <div className="tabs-img"><Image src={tabs} alt="edy-ia"/></div>

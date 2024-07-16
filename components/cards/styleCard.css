@@ -3,7 +3,10 @@
     overflow: hidden;
     display: flex;
     border-radius: 20px;
-    background-color: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 1rem;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-start-end)))rgb(var(--background-start-card));
 }
