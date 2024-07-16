@@ -274,7 +274,7 @@ h6 {font-size: 0.67em; font-weight: bold;}
   border: 1px solid #fff;
   width: 60%;
 }
-.terminal .copy-icon{color: #F6AB65;}
+.terminal .copy-icon{color: #F6AB65; cursor: pointer;transition: color 0.3s ease;}
 .terminal .copy-icon:hover{transform: scale(1.1);}
 
 

@@ -4,8 +4,9 @@ import Image from "next/image";
 import Navbar from "@/components/navbar/navbar"
 import CardFramework from "@/components/cards/cardFramework"
 import { LuCopy } from "react-icons/lu";
+import { IoMdCheckmark } from "react-icons/io";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import 'aos/dist/aos.css';
 AOS.init();
 
@@ -27,6 +28,16 @@ import electron from '@/public/electron.png';
 // -----------------------------------------------------------
 export default function Home() {
   useEffect(() => {AOS.init();}, []);
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('npx install devcci-tools');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch (err) {console.error('Échec de la copie : ', err);}
+  }
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between">
@@ -40,7 +51,9 @@ export default function Home() {
           <p>Docs+, composants, astuces, débogage, forum</p>
           <div className="terminal">
             <p>$ ~<span> npx install devcci-tools</span></p>
-            <span className="copy-icon"><LuCopy /></span>
+            <span className="copy-icon" onClick={handleCopy}>
+              {copied ? <IoMdCheckmark /> : <LuCopy />}
+            </span>
           </div>
         </div>
         <div className="images-hero">
