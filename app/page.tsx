@@ -8,9 +8,6 @@ import { IoMdCheckmark } from "react-icons/io";
 import AOS from "aos";
 import { useState, useEffect } from "react";
 import 'aos/dist/aos.css';
-AOS.init();
-
-
 
 
 // ---------------------IMAGES--------------------------------
