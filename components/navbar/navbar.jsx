@@ -33,9 +33,9 @@ export default function Navbar(){
                 <Image src="https://img.icons8.com/ios/50/search--v1.png" alt="search icon" width={15} height={15}/>
             </div>
             <div className="navlinks">
-                <a className="nav-link" href="/docs">Docs</a>
-                <a className="nav-link" href="/composants">Composants</a>
-                <a className="nav-link" href="/astuces">Astuces</a>
+                <a className="nav-link" href="/docs">Astuces</a>
+                <a className="nav-link" href="/composants">Bugs</a>
+                <a className="nav-link" href="/astuces">Composants</a>
                 <Image onClick={() => router.push('/login')} width="40" height="40" src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1"/>
             </div>
             <div className="hamburger"><IoMenuSharp /></div>
