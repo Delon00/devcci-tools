@@ -1,7 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+'use client'
 import Image from "next/image";
 import Navbar from "@/components/navbar/navbar"
 import CardFramework from "@/components/cards/cardFramework"
+import { LuCopy } from "react-icons/lu";
+import AOS from "aos";
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 
@@ -20,17 +26,22 @@ import flutter from '@/public/flutter.png';
 import electron from '@/public/electron.png';
 // -----------------------------------------------------------
 export default function Home() {
+  useEffect(() => {AOS.init();}, []);
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Navbar/>
-      <div className="main-hero">
-        <div className="texts-hero">
+      <div  className="main-hero">
+        <div  className="texts-hero" >
           <div className="circlebubble"></div>
           <div className="circlebubble2"></div>
           <h1>Devcci tools</h1>
           <h2>Augmentez votre productivité grâce à nos composants,docs et astuces avancés.</h2>
           <p>Docs+, composants, astuces, débogage, forum</p>
+          <div className="terminal">
+            <p>$ ~<span> npx install devcci-tools</span></p>
+            <span className="copy-icon"><LuCopy /></span>
+          </div>
         </div>
         <div className="images-hero">
           <div className="guapo-store"><Image src={guapo} alt="guapo store"/></div>
@@ -41,10 +52,11 @@ export default function Home() {
           <div className="chat date-picker chat-start"><div className="chat-bubble">Hey Delon j&apos;aurais besoin<br />d'astuces pour mon projet electron js</div> </div>
         </div>
       </div>
+
       <div className="section2">
         <div className="circlePosition"></div>
         <div className="circlePosition2"></div>
-        <div className="texts-section2">
+        <div data-aos="fade-up" className="texts-section2">
           <h1>Choisissez votre <span>language</span>  ou <span>framework</span> et documentez-vous. </h1>
           <p>Sélectionnez votre outil de prédilection et accédez à des ressources variées pour approfondir vos connaissances et maîtriser les technologies de pointe.</p>
         </div>
