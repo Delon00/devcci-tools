@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css"
 import Image from "next/image";
-
+import { IoMenuSharp } from "react-icons/io5";
 
 export default function Navbar(){
 
@@ -38,6 +38,7 @@ export default function Navbar(){
                 <a className="nav-link" href="/astuces">Astuces</a>
                 <Image onClick={() => router.push('/login')} width="40" height="40" src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1"/>
             </div>
+            <div className="hamburger"><IoMenuSharp /></div>
         </main>
     )
 }

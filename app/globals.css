@@ -301,7 +301,8 @@ h6 {font-size: 0.67em; font-weight: bold;}
 
 }
 @media only screen and (max-width: 568px) {
-  .nav-link{display: none;}
+  .navlinks{display: none !important;}
+  .hamburger{display: flex !important;}
   .texts-section2{width: 100% !important;}
   .texts-hero h2 {font-size: 25px;}
   .terminal{width: 100%;}
