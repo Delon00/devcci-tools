@@ -30,7 +30,7 @@ export default function Home() {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText('npx install devcci-tools');
+      await navigator.clipboard.writeText('npm install devcci-tools');
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch (err) {console.error('Échec de la copie : ', err);}
@@ -47,7 +47,7 @@ export default function Home() {
           <h2>Augmentez votre productivité grâce à nos composants,docs et astuces avancés.</h2>
           <p>Docs+, composants, astuces, débogage, forum</p>
           <div className="terminal">
-            <p>$ ~<span> npx install devcci-tools</span></p>
+            <p>$ ~<span> npm install devcci-tools</span></p>
             <span className="copy-icon" onClick={handleCopy}>
               {copied ? <IoMdCheckmark /> : <LuCopy />}
             </span>
