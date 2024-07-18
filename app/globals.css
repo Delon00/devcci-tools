@@ -199,7 +199,6 @@ h6 {font-size: 0.67em; font-weight: bold;}
   left: 70%;
   transform: translate(-50%, -50%);
   filter: blur(250px);
-  animation: moveBubble 4s infinite ease-in-out;
 }
 .circlePosition2 {
   width: 300px;
@@ -212,7 +211,6 @@ h6 {font-size: 0.67em; font-weight: bold;}
   left: 20%;
   transform: translate(-50%, -50%);
   filter: blur(250px);
-  animation: moveBubble2 4s infinite ease-in-out;
 }
 
 .texts-section2{
@@ -289,7 +287,6 @@ h6 {font-size: 0.67em; font-weight: bold;}
 
 
 
-
 /* ----------------------------------------------------------------------------- */
 @media only screen and (max-width: 910px) {
   .main-hero{background-color: #ffffff00;}
@@ -298,8 +295,15 @@ h6 {font-size: 0.67em; font-weight: bold;}
 @media only screen and (max-width: 768px) {
   .card-framework img{width: 70px; height: auto;}
   .nav-search{display: none !important;}
+  .bulle1,.bulle2{height: 70px; width: 70px;}
+  .sidebar{display: none;}
+  .sidebar-responsive{display: flex;}
 
 
+}
+@media only screen and (max-width:650) {
+  .bulle1,.bulle2{height: 50px; width: 50px;}
+  .hero-composant h1{font-size: 4rem;}
 }
 @media only screen and (max-width: 568px) {
   .navlinks{display: none !important;}
@@ -307,8 +311,11 @@ h6 {font-size: 0.67em; font-weight: bold;}
   .texts-section2{width: 100% !important;}
   .texts-hero h2 {font-size: 25px;}
   .terminal{width: 100%;}
+  .hero-composant h1{font-size: 3.5rem;}
+  
 }
 @media only screen and (max-width: 400px) {
   .circlePosition{width: 200px !important;}
   .circlebubble{width: 200px !important;}
+  .hero-composant h1{font-size: 2.5rem;}
 }

@@ -53,6 +53,8 @@ export default function Composants() {
       <Navbar />
       <div className="hero-composant">
         <div className="hero-composant-section">
+          <div className='bulle1'></div>
+          <div className='bulle2'></div>
           <h1>Composants</h1>
         </div>
       </div>
@@ -83,6 +85,7 @@ export default function Composants() {
             </li>
           </ul>
         </div>
+        <div className='sidebar-responsive'></div>
         <div className="content-section">{renderComponent()}</div>
       </div>
     </main>
