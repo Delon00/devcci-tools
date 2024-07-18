@@ -14,7 +14,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 10) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -41,7 +41,7 @@ export default function Navbar() {
             </div>
             <div className="navlinks">
                 <Link className="nav-link" href="/docs">Astuces</Link>
-                <Link className="nav-link" href="/composants">Bugs</Link>
+                <Link className="nav-link" href="/bugs">Bugs</Link>
                 <Link className="nav-link" href="/composants">Composants</Link>
                 <Image onClick={() => router.push('/login')} width="40" height="40" src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1" />
             </div>

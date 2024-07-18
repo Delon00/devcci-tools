@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/navbar/navbar';
+import Footer from "@/components/footer"
 import './composants.css';
 import { BiSolidComponent } from 'react-icons/bi';
 import { IoArrowForward, IoClose } from "react-icons/io5";
@@ -143,6 +144,7 @@ export default function Composants() {
             </li>
           </ul>
       </div>
+      <Footer/>
     </main>
   );
 }
