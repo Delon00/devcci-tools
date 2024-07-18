@@ -101,6 +101,8 @@
     text-align: center;
     animation: slideIn 0.3s ease;
     color: #fff;
+    height: 70%;
+    width: 80%;
 }
 
 @keyframes slideIn {
@@ -115,7 +117,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .modal-navlinks .nav-link{
