@@ -4,7 +4,7 @@
     align-items: center;
 }
 .hero-composant{
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     width: 100%;
 }
 .hero-composant-section{
@@ -15,6 +15,7 @@
     height: 40vh;
     width: 100%;
     background: #000000;
+    border: 1px solid #ffffff17;
     border-radius: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
@@ -63,9 +64,10 @@
     padding:0rem 2rem;
 }
 .sidebar{width: 25%;}
-.sidebar-responsive{
-    
-}
+.sidebar-responsive{display: none;flex-direction: column;position: absolute; width: 80%; background-color:#fff; width: 80%; height: 100%;z-index: 10; left: 0;padding: 2rem 0.5rem;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.sidebar-responsive.active{display: flex;}
+.sidebar-responsive-btn{display: none;justify-content: center; align-items: center;font-size: 1.5rem; cursor: pointer;}
+.flex .close-btn{display: flex;justify-content: flex-end; width: 100%; font-size: 1.5rem;margin-bottom: 1rem;z-index: 999; cursor: pointer;}
 .sidebar h3{
     margin: 1rem 0;
     font-size: 1.5rem;
@@ -117,7 +119,7 @@ li.current{
 @media only screen and (max-width: 768px) {
     .bulle1,.bulle2{height: 70px; width: 70px;filter: blur(70px);}
     .sidebar{display: none;}
-    .sidebar-responsive{display: flex;}
+    .sidebar-responsive-btn{display: flex;}
 }
 @media only screen and (max-width:650) {
     .bulle1,.bulle2{height: 50px; width: 50px;filter: blur(50px);}
@@ -129,4 +131,5 @@ li.current{
 }
 @media only screen and (max-width: 400px) {
     .hero-composant h1{font-size: 2.5rem;}
+    .hero-composant-section{height: 25vh;}
 }

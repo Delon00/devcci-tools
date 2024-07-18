@@ -4,11 +4,11 @@ import Image from 'next/image';
 import Navbar from '@/components/navbar/navbar';
 import './composants.css';
 import { BiSolidComponent } from 'react-icons/bi';
+import { IoArrowForward, IoClose } from "react-icons/io5";
 
-// Importez votre image
+
 import guapo from '@/public/guapo.png';
 
-// Importez les composants spécifiques
 import Avatar from './pages/avatar';
 import Button from './pages/button';
 import Card from './pages/card';
@@ -18,15 +18,21 @@ import Icon from './pages/icon';
 import Modal from './pages/modal';
 
 export default function Composants() {
-  // État pour suivre le composant actuellement affiché
   const [selectedComponent, setSelectedComponent] = useState('avatar');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Fonction pour mettre à jour le composant sélectionné
   const handleComponentChange = (component) => {
     setSelectedComponent(component);
   };
 
-  // Sélectionner le composant à afficher en fonction de selectedComponent
+  const toogleSidebarOn = () => {
+    setIsSidebarOpen(true);
+  };
+
+  const toogleSidebarOff = () => {
+    setIsSidebarOpen(false);
+  };
+
   const renderComponent = () => {
     switch (selectedComponent) {
       case 'avatar':
@@ -60,7 +66,11 @@ export default function Composants() {
       </div>
       <div className="composant-section1">
         <div className="sidebar">
-          <h3 className="flex items-center"><BiSolidComponent /> Composants</h3>
+          <div className='flex justify-between'>
+            <h3 className="flex items-center"><BiSolidComponent /> Composants</h3>
+            <span className='close-btn' onClick={toogleSidebarOff}><IoClose/></span>
+          </div>
+
           <ul>
             <li className={selectedComponent === 'avatar' ? 'current' : ''}>
               <button onClick={() => handleComponentChange('avatar')}>Avatar</button>
@@ -85,8 +95,35 @@ export default function Composants() {
             </li>
           </ul>
         </div>
-        <div className='sidebar-responsive'></div>
+        <div className='sidebar-responsive-btn' onClick={toogleSidebarOn}><IoArrowForward /></div>
         <div className="content-section">{renderComponent()}</div>
+      </div>
+      <div className={`sidebar-responsive ${isSidebarOpen ? 'active' : ''}`}>
+
+        <h3 className="flex items-center my-2"><BiSolidComponent /> Composants</h3>
+        <ul>
+            <li className={selectedComponent === 'avatar' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('avatar')}>Avatar</button>
+            </li>
+            <li className={selectedComponent === 'button' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('button')}>Button</button>
+            </li>
+            <li className={selectedComponent === 'card' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('card')}>Card</button>
+            </li>
+            <li className={selectedComponent === 'dropdown' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('dropdown')}>Dropdown</button>
+            </li>
+            <li className={selectedComponent === 'form' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('form')}>Form</button>
+            </li>
+            <li className={selectedComponent === 'icon' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('icon')}>Icon</button>
+            </li>
+            <li className={selectedComponent === 'modal' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
+              <button onClick={() => handleComponentChange('modal')}>Modal</button>
+            </li>
+          </ul>
       </div>
     </main>
   );
