@@ -66,11 +66,7 @@ export default function Composants() {
       </div>
       <div className="composant-section1">
         <div className="sidebar">
-          <div className='flex justify-between'>
             <h3 className="flex items-center"><BiSolidComponent /> Composants</h3>
-            <span className='close-btn' onClick={toogleSidebarOff}><IoClose/></span>
-          </div>
-
           <ul>
             <li className={selectedComponent === 'avatar' ? 'current' : ''}>
               <button onClick={() => handleComponentChange('avatar')}>Avatar</button>
@@ -99,8 +95,11 @@ export default function Composants() {
         <div className="content-section">{renderComponent()}</div>
       </div>
       <div className={`sidebar-responsive ${isSidebarOpen ? 'active' : ''}`}>
+          <div className='flex justify-between items-center'>
+            <h3 className="flex items-center my-2"><BiSolidComponent /> Composants</h3>
+            <span className='close-btn' onClick={toogleSidebarOff}><IoClose/></span>
+          </div>
 
-        <h3 className="flex items-center my-2"><BiSolidComponent /> Composants</h3>
         <ul>
             <li className={selectedComponent === 'avatar' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
               <button onClick={() => handleComponentChange('avatar')}>Avatar</button>

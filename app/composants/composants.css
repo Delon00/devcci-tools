@@ -64,10 +64,10 @@
     padding:0rem 2rem;
 }
 .sidebar{width: 25%;}
-.sidebar-responsive{display: none;flex-direction: column;position: absolute; width: 80%; background-color:#fff; width: 80%; height: 100%;z-index: 10; left: 0;padding: 2rem 0.5rem;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.sidebar-responsive{display: none;flex-direction: column;position: absolute; width: 80%; background-color:#fff; width: 80%; height: 100%;z-index: 10; left: 0;padding: 4rem 0.5rem;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 .sidebar-responsive.active{display: flex;}
 .sidebar-responsive-btn{display: none;justify-content: center; align-items: center;font-size: 1.5rem; cursor: pointer;}
-.flex .close-btn{display: flex;justify-content: flex-end; width: 100%; font-size: 1.5rem;margin-bottom: 1rem;z-index: 999; cursor: pointer;}
+.flex .close-btn{display: flex;justify-content: flex-end; width: 100%; font-size: 1.5rem; cursor: pointer;}
 .sidebar h3{
     margin: 1rem 0;
     font-size: 1.5rem;
