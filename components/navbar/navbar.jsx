@@ -54,7 +54,7 @@ export default function Navbar() {
                         <div className="modal-navlinks">
                             <Link className="nav-link" href="/docs">Astuces</Link>
                             <Link className="nav-link" href="/composants">Bugs</Link>
-                            <Link className="nav-link" href="/astuces">Composants</Link>
+                            <Link className="nav-link" href="/composants">Composants</Link>
                             <Link className="nav-link" href="/login">Connexion</Link>
                         </div>
                     </div>

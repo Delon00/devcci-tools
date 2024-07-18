@@ -5,6 +5,8 @@ import Navbar from '@/components/navbar/navbar';
 import './composants.css';
 import { BiSolidComponent } from 'react-icons/bi';
 import { IoArrowForward, IoClose } from "react-icons/io5";
+import { IoMdCheckmark } from "react-icons/io";
+import { LuCopy } from "react-icons/lu";
 
 
 import guapo from '@/public/guapo.png';
@@ -20,6 +22,15 @@ import Modal from './pages/modal';
 export default function Composants() {
   const [selectedComponent, setSelectedComponent] = useState('avatar');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('npm install devcci-tools');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch (err) {console.error('Échec de la copie : ', err);}
+  }
 
   const handleComponentChange = (component) => {
     setSelectedComponent(component);
@@ -61,7 +72,15 @@ export default function Composants() {
         <div className="hero-composant-section">
           <div className='bulle1'></div>
           <div className='bulle2'></div>
-          <h1>Composants</h1>
+          <div className='flex flex-col justify-center items-center'>
+            <h1>Composants</h1>
+            <div className="terminal">
+              <p className='text-white'>$ ~<span > npm install devcci-tools</span></p>
+              <span className="copy-icon" onClick={handleCopy}>
+                {copied ? <IoMdCheckmark /> : <LuCopy />}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <div className="composant-section1">
@@ -83,7 +102,7 @@ export default function Composants() {
             <li className={selectedComponent === 'form' ? 'current' : ''}>
               <button onClick={() => handleComponentChange('form')}>Form</button>
             </li>
-            <li className={selectedComponent === 'icon' ? 'current' : ''}>
+            <li className={selectedComponent === 'icons' ? 'current' : ''}>
               <button onClick={() => handleComponentChange('icons')}>Icon</button>
             </li>
             <li className={selectedComponent === 'modal' ? 'current' : ''}>
@@ -117,7 +136,7 @@ export default function Composants() {
               <button onClick={() => handleComponentChange('form')}>Form</button>
             </li>
             <li className={selectedComponent === 'icon' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
-              <button onClick={() => handleComponentChange('icon')}>Icon</button>
+              <button onClick={() => handleComponentChange('icons')}>Icon</button>
             </li>
             <li className={selectedComponent === 'modal' ? 'current my-2 ps-2' : 'my-2 ps-2'}>
               <button onClick={() => handleComponentChange('modal')}>Modal</button>
