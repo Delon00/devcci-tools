@@ -2,11 +2,13 @@
 'use client'
 import Image from "next/image";
 import Navbar from "@/components/navbar/navbar"
+import Footer from "@/components/footer"
 import CardFramework from "@/components/cards/cardFramework"
 import { LuCopy } from "react-icons/lu";
 import { IoMdCheckmark } from "react-icons/io";
 import AOS from "aos";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import 'aos/dist/aos.css';
 
 
@@ -72,7 +74,7 @@ export default function Home() {
         </div>
         <div className="cards-section2-container">
           <CardFramework>
-            <a className="card-link" href="/"></a>
+            <Link className="card-link" href="/"></Link>
             <Image className="logo-section2" src={nextjs} alt="nextjs"/>
             <div className="card-texts">
               <h2>NextJs</h2>
@@ -80,7 +82,7 @@ export default function Home() {
             </div>
           </CardFramework>
           <CardFramework>
-            <a className="card-link" href="/"></a>
+            <Link className="card-link" href="/"></Link>
             <Image className="logo-section2" src={reactjs} alt="nextjs"/>
             <div className="card-texts">
               <h2 className="text-[#00d7fe]">React</h2>
@@ -122,6 +124,7 @@ export default function Home() {
         </div>
 
       </div>
+      <Footer/>
     </main>
   );
 }

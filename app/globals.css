@@ -199,6 +199,7 @@ h6 {font-size: 0.67em; font-weight: bold;}
   left: 70%;
   transform: translate(-50%, -50%);
   filter: blur(250px);
+  animation: moveBubble 4s infinite ease-in-out;
 }
 .circlePosition2 {
   width: 300px;
@@ -211,7 +212,9 @@ h6 {font-size: 0.67em; font-weight: bold;}
   left: 20%;
   transform: translate(-50%, -50%);
   filter: blur(250px);
+  animation: moveBubble2 4s infinite ease-in-out;
 }
+
 .texts-section2{
   width: 60%;
 }
@@ -275,8 +278,7 @@ h6 {font-size: 0.67em; font-weight: bold;}
 }
 .terminal .copy-icon{color: #F6AB65; cursor: pointer;transition: color 0.3s ease;}
 .terminal .copy-icon:hover{transform: scale(1.1);}
-
-
+.footer-brand{font-weight: bold; cursor: pointer;}
 
 
 
