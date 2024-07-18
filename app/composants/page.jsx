@@ -14,7 +14,7 @@ import Button from './pages/button';
 import Card from './pages/card';
 import Dropdown from './pages/dropdown';
 import Form from './pages/form';
-import Icon from './pages/icon';
+import Icon from './pages/icons';
 import Modal from './pages/modal';
 
 export default function Composants() {
@@ -45,7 +45,7 @@ export default function Composants() {
         return <Dropdown />;
       case 'form':
         return <Form />;
-      case 'icon':
+      case 'icons':
         return <Icon />;
       case 'modal':
         return <Modal />;
@@ -88,7 +88,7 @@ export default function Composants() {
               <button onClick={() => handleComponentChange('form')}>Form</button>
             </li>
             <li className={selectedComponent === 'icon' ? 'current' : ''}>
-              <button onClick={() => handleComponentChange('icon')}>Icon</button>
+              <button onClick={() => handleComponentChange('icons')}>Icon</button>
             </li>
             <li className={selectedComponent === 'modal' ? 'current' : ''}>
               <button onClick={() => handleComponentChange('modal')}>Modal</button>
