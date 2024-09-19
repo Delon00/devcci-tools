@@ -40,7 +40,7 @@ export default function Navbar() {
                 <Image src="https://img.icons8.com/ios/50/search--v1.png" alt="search icon" width={15} height={15} />
             </div>
             <div className="navlinks">
-                <Link className="nav-link" href="/docs">Astuces</Link>
+                <Link className="nav-link" href="/astuces">Astuces</Link>
                 <Link className="nav-link" href="/bugs">Bugs</Link>
                 <Link className="nav-link" href="/composants">Composants</Link>
                 <Image onClick={() => router.push('/login')} width="40" height="40" src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1" />

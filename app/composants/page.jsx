@@ -9,7 +9,6 @@ import { IoArrowForward, IoClose } from "react-icons/io5";
 import { IoMdCheckmark } from "react-icons/io";
 import { LuCopy } from "react-icons/lu";
 
-
 import guapo from '@/public/guapo.png';
 
 import Avatar from './pages/avatar';
